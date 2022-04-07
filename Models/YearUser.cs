@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LeapYears.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace LeapYears
         [RegularExpression(@"^[a-z A-Z]*$", ErrorMessage = "{0} powinna zawierać tylko litery!")]
         public string lastname { get; set; }
 
-        // lista?
+        public virtual ICollection<History>? history { get; set; }
 
 
         public bool ExtraYear()
@@ -60,6 +61,11 @@ namespace LeapYears
 
             else
                 return false;
+        }
+
+        public History AddView(int count)
+        {
+            return new History(count, Id);
         }
     }
 }

@@ -26,6 +26,9 @@ namespace LeapYears.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("YearUserId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("date")
                         .HasColumnType("datetime2");
 
@@ -33,6 +36,8 @@ namespace LeapYears.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("YearUserId");
 
                     b.ToTable("History");
                 });
@@ -59,6 +64,22 @@ namespace LeapYears.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("LeapYears.Models.History", b =>
+                {
+                    b.HasOne("LeapYears.YearUser", "YearUser")
+                        .WithMany("history")
+                        .HasForeignKey("YearUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("YearUser");
+                });
+
+            modelBuilder.Entity("LeapYears.YearUser", b =>
+                {
+                    b.Navigation("history");
                 });
 #pragma warning restore 612, 618
         }
