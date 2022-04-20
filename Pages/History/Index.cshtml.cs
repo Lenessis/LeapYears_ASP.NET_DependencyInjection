@@ -20,12 +20,12 @@ namespace LeapYears.Pages.History
             _context = context;
         }
 
-        public IList<Models.History> History { get;set; }
+        public IList<Models.HistoryUser> History { get;set; }
 
         public async Task OnGetAsync()
         {
             History = await _context.History
-                .Include(h => h.YearUser).ToListAsync();
+                .Include(h => h.YearUser).OrderByDescending(h => h.date).Take(20).ToListAsync();
         }
     }
 }

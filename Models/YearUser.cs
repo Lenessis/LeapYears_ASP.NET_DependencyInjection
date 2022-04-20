@@ -30,7 +30,7 @@ namespace LeapYears
         [RegularExpression(@"^[a-z A-Z]*$", ErrorMessage = "{0} powinna zawierać tylko litery!")]
         public string lastname { get; set; }
 
-        public virtual ICollection<History>? history { get; set; }
+        public virtual ICollection<HistoryUser>? history { get; set; }
 
 
         public bool ExtraYear()
@@ -63,9 +63,9 @@ namespace LeapYears
                 return false;
         }
 
-        public History AddView(int count)
+        public HistoryUser AddView(string phrase)
         {
-            return new History(count, Id);
+            return new HistoryUser(phrase, Id);
         }
     }
 }

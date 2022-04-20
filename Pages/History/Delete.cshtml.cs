@@ -20,7 +20,7 @@ namespace LeapYears.Pages.History
         }
 
         [BindProperty]
-        public Models.History History { get; set; }
+        public Models.HistoryUser History { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

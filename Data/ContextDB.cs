@@ -11,6 +11,6 @@ namespace LeapYears.Data
     {
         public ContextDB(DbContextOptions options) : base(options) { }
         public DbSet<YearUser> User { get; set; }
-        public DbSet<History> History { get; set; }
+        public DbSet<HistoryUser> History { get; set; }
     }
 }

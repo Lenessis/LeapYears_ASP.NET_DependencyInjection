@@ -19,7 +19,7 @@ namespace LeapYears.Migrations
                 .HasAnnotation("ProductVersion", "5.0.15")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("LeapYears.Models.History", b =>
+            modelBuilder.Entity("LeapYears.Models.HistoryUser", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,8 +32,8 @@ namespace LeapYears.Migrations
                     b.Property<DateTime>("date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("result")
-                        .HasColumnType("int");
+                    b.Property<string>("result")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -66,7 +66,7 @@ namespace LeapYears.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("LeapYears.Models.History", b =>
+            modelBuilder.Entity("LeapYears.Models.HistoryUser", b =>
                 {
                     b.HasOne("LeapYears.YearUser", "YearUser")
                         .WithMany("history")

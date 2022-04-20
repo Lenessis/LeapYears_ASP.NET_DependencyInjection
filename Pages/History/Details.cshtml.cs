@@ -19,7 +19,7 @@ namespace LeapYears.Pages.History
             _context = context;
         }
 
-        public Models.History History { get; set; }
+        public Models.HistoryUser History { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

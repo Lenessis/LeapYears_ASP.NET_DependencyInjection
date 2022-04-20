@@ -25,6 +25,8 @@ namespace LeapYears.Pages
             _context = context;
         }
 
+        //dodac ostatnio szukane
+
         /*
          * Wyszukiwanie
          * Tutorial: https://www.youtube.com/watch?v=gb6TMtoGQEM
@@ -40,7 +42,7 @@ namespace LeapYears.Pages
                
                 foreach (var item in listDB)
                 {
-                    _context.History.Add(item.AddView(listDB.Count));
+                    _context.History.Add(item.AddView(user));
                     _context.SaveChanges();
                 }
                 
