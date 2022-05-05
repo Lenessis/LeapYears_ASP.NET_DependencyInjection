@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad 3-4 - lata przestępne (sesja+baza_danych)\\LeapYears\\LeapYears.csproj": {}
+    "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad6 - wstrzykiwanie serwisów\\LeapYears\\LeapYears.csproj": {}
   },
   "projects": {
-    "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad 3-4 - lata przestępne (sesja+baza_danych)\\LeapYears\\LeapYears.csproj": {
+    "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad6 - wstrzykiwanie serwisów\\LeapYears\\LeapYears.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad 3-4 - lata przestępne (sesja+baza_danych)\\LeapYears\\LeapYears.csproj",
+        "projectUniqueName": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad6 - wstrzykiwanie serwisów\\LeapYears\\LeapYears.csproj",
         "projectName": "LeapYears",
-        "projectPath": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad 3-4 - lata przestępne (sesja+baza_danych)\\LeapYears\\LeapYears.csproj",
+        "projectPath": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad6 - wstrzykiwanie serwisów\\LeapYears\\LeapYears.csproj",
         "packagesPath": "C:\\Users\\Strix\\.nuget\\packages\\",
-        "outputPath": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad 3-4 - lata przestępne (sesja+baza_danych)\\LeapYears\\obj\\",
+        "outputPath": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad6 - wstrzykiwanie serwisów\\LeapYears\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -95,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

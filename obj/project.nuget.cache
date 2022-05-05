@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zSRmj/Zyy1xMXAPx20DJ1Tzi0S+8B/vfMJOFevVD6qKzCmwF40D2qsrS9Ab5hM8uIoL7KthlLMTMNsDSxXMKug==",
+  "dgSpecHash": "4FWZUgMSwwGKHDrF+JVD+TkKYvkWehI3+pDvXmHq+ZussHb7C1VP3kKhKUb4Q1hXPVTwtkW04qZPakaqiiJ99g==",
   "success": true,
-  "projectFilePath": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad 3-4 - lata przestępne (sesja+baza_danych)\\LeapYears\\LeapYears.csproj",
+  "projectFilePath": "D:\\Dokumenty\\Studia\\06.SEMESTR VI\\.NET\\zad6 - wstrzykiwanie serwisów\\LeapYears\\LeapYears.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Strix\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Strix\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",

@@ -50,7 +50,6 @@ D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_da
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\LeapYears.RazorAssemblyInfo.cache
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\LeapYears.RazorAssemblyInfo.cs
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\staticwebassets\LeapYears.StaticWebAssets.Manifest.cache
-D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\staticwebassets\LeapYears.StaticWebAssets.xml
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\scopedcss\bundle\LeapYears.styles.css
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\LeapYears.TagHelpers.input.cache
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\LeapYears.TagHelpers.output.cache
@@ -149,3 +148,4 @@ D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_da
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\Razor\Pages\History\Delete.cshtml.g.cs
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\Razor\Pages\History\Details.cshtml.g.cs
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\obj\Debug\net5.0\Razor\Pages\History\Index.cshtml.g.cs
+D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad 3-4 - lata przestępne (sesja+baza_danych)\LeapYears\bin\Debug\net5.0\LeapYears.StaticWebAssets.xml

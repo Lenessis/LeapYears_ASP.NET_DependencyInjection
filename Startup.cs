@@ -31,14 +31,6 @@ namespace LeapYears
             // -- Razor Pages
             services.AddRazorPages();
 
-            // -- sesja i cookie
-            services.AddDistributedMemoryCache();
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromSeconds(30);
-                options.Cookie.HttpOnly = true;
-                options.Cookie.IsEssential = true;
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,9 +50,6 @@ namespace LeapYears
             app.UseRouting();
 
             app.UseAuthorization();
-
-            // -- sesja
-            app.UseSession(); 
 
             app.UseEndpoints(endpoints =>
             {
