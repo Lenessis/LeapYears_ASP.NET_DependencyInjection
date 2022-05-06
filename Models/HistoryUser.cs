@@ -36,5 +36,6 @@ namespace LeapYears.Models
             YearUserId = userId;
             YearUser = user;
         }
+
     }
 }
