@@ -29,6 +29,6 @@ namespace LeapYears.Repositories
                   p.date.Month.Equals(today.Month) &&
                   p.date.Day.Equals(today.Day))
                 .OrderByDescending(p => p.date);
-        } //wstrzykiwanie serwisów + dodawanie do bazy + wyświetlanie + person?
+        } 
     }
 }

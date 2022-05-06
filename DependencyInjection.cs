@@ -14,5 +14,13 @@ namespace LeapYears
 
             return services;
         }
+
+        public static IServiceCollection AddPersonService (this IServiceCollection services)
+        {
+            services.AddTransient<IPersonService, PersonService>();
+            services.AddTransient<IPersonRepository, PersonRepository>();
+
+            return services;
+        }
     }
 }

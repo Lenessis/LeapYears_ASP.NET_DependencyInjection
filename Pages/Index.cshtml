@@ -3,9 +3,28 @@
 @{
     ViewData["Title"] = "Home page";
 
-    <h1>Strona główna</h1>
+    <h1>Dzisiejsze wyszukiwania (@Model.records.Count)</h1>
 
-    
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Użytkownik</th>
+                <th scope="col">Wyszukiwany wynik</th>
+                <th scope="col">Czas</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.records.History)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Fullname)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Result)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                </tr>
+            }
+        </tbody>      
+    </table>
 
 }
 

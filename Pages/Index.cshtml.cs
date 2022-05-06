@@ -8,50 +8,36 @@ using System.Threading.Tasks;
 
 
 using LeapYears.Data;
+using LeapYears.Interfaces;
+using LeapYears.DTO;
 
 namespace LeapYears.Pages
 {
     public class IndexModel : PageModel
-    {
-        
-       /* public bool extra, gender;
-        public bool hide = true;
-
-        [BindProperty]
-        public YearUser user { get; set; }
-        public List<YearUser> list = new List<YearUser>();
-        public List<YearUser> listDB = new List<YearUser>();*/
-
+    {       
         private readonly ILogger<IndexModel> _logger;
-       //private readonly ContextDB _context; // -- context bazy danych 
 
-        public IndexModel(ILogger<IndexModel> logger, ContextDB context)
+        // -- Wstrzykiwanie serwisów
+        private readonly IHistoryService _historyService;
+        public ListHistoryDTO records { get; set; }
+
+        public IndexModel(ILogger<IndexModel> logger, IHistoryService historyService)
         {
             _logger = logger;
-           // _context = context;
+            _historyService = historyService;
         }
 
         public void OnGet()
         {
-           // listDB = _context.User.OrderBy(p => p.name).ToList();
+            records = _historyService.GetHistoryToList(true);
+
         }
 
         public IActionResult OnPost()
         {
-            //listDB = _context.User.OrderBy(p => p.name).ToList();
 
             if (ModelState.IsValid)
             {
-                /*ViewData["extraY"] = user.year;
-                ViewData["user"] = user.name;
-                extra = user.ExtraYear();
-                gender = user.Gender();
-                hide = false;
-
-                
-
-                _context.User.Add(user);
-                _context.SaveChanges();*/
 
                
             }

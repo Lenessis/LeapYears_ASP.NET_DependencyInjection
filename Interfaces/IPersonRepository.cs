@@ -5,5 +5,6 @@ namespace LeapYears.Interfaces
     public interface IPersonRepository
     {
         IQueryable<YearUser> GetAllPeople();
+        IQueryable<YearUser> GetPersonById(int id);
     }
 }

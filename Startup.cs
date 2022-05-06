@@ -33,6 +33,7 @@ namespace LeapYears
 
             // -- DependencyInjection
             services.AddHistoryService();
+            services.AddPersonService();
 
         }
 

@@ -7,10 +7,12 @@ namespace LeapYears.Services
     public class HistoryService : IHistoryService
     {
         private readonly IHistoryRepository _historyRepository; 
+        //private readonly IPersonService _personService;
 
-        public HistoryService (IHistoryRepository historyRepository)
+        public HistoryService (IHistoryRepository historyRepository/*, IPersonService personService*/)
         {
             _historyRepository = historyRepository;
+           // _personService = personService;
         }
 
         public ListHistoryDTO GetHistoryToList()
@@ -27,12 +29,15 @@ namespace LeapYears.Services
 
             foreach (var item in history)
             {
+                //PersonDTO personName = _personService.GetPerson(item.YearUserId);
                 var newHistoryItem = new HistoryDTO()
                 {
                     Id = item.Id,
                     Date = item.date,
                     Result = item.result,
-                    Fullname = item.YearUser.name + " " + item.YearUser.lastname
+                    //Fullname = item.YearUser.name + " " + item.YearUser.lastname
+                    Fullname = item.YearUserId.ToString()
+                    
                 };
                 result.History.Add(newHistoryItem);
             }
