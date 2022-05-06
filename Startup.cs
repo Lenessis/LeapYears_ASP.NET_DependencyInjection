@@ -31,6 +31,9 @@ namespace LeapYears
             // -- Razor Pages
             services.AddRazorPages();
 
+            // -- DependencyInjection
+            services.AddHistoryService();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
