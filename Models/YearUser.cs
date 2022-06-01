@@ -32,6 +32,8 @@ namespace LeapYears
 
         public virtual ICollection<HistoryUser>? history { get; set; }
 
+        public YearUser() {  }
+
 
         public bool ExtraYear()
         {

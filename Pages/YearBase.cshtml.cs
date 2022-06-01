@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LeapYears.Data;
+using LeapYears.DTO;
+using LeapYears.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -11,21 +9,21 @@ namespace LeapYears.Pages
 {
     public class YearBaseModel : PageModel
     {
+        public ListPersonDTO records { get; set; }
 
-        public List<YearUser> listDB = new List<YearUser>();
         [BindProperty(SupportsGet =true)]
         public string user { get; set; }
 
         private readonly ILogger<YearBaseModel> _logger;
-        private readonly ContextDB _context; // -- context bazy danych 
+        private readonly IPersonService _personService;
+        private readonly IHistoryService _historyService;
 
-        public YearBaseModel(ILogger<YearBaseModel> logger, ContextDB context)
+        public YearBaseModel(ILogger<YearBaseModel> logger, IPersonService personService, IHistoryService historyService)
         {
             _logger = logger;
-            _context = context;
+            _personService = personService;
+            _historyService = historyService;
         }
-
-        //dodac ostatnio szukane
 
         /*
          * Wyszukiwanie
@@ -35,21 +33,16 @@ namespace LeapYears.Pages
         public void OnGet()
         {
             if (string.IsNullOrEmpty(user))
-                listDB = _context.User.OrderBy(p => p.name).ToList();
+                records = _personService.GetPeopleToList();
             else
             {
-                listDB = _context.User.Where(p => p.name.Contains(user) || p.lastname.Contains(user)).OrderBy(p => p.name).ToList();
-               
-                foreach (var item in listDB)
+                records = _personService.GetPersonsByNameToList(user);
+
+                foreach (var item in records.People)
                 {
-                    _context.History.Add(item.AddView(user));
-                    _context.SaveChanges();
+                    _historyService.AddNewHistory(user, item.Id);
                 }
-                
-            }
-                
+            }               
         }
-
-
     }
 }

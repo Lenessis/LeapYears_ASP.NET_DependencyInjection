@@ -14,32 +14,30 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.History[0].date)
+                Data
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.History[0].result)
+                Szukana fraza
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.History[0].YearUser)
+                Użytkownik
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.History) {
+@foreach (var item in Model.records.History) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.date)
+                @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.result)
+                @Html.DisplayFor(modelItem => item.Result)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.YearUser.name) @Html.DisplayFor(modelItem => item.YearUser.lastname)
+                @Html.DisplayFor(modelItem => item.Fullname)
             </td>
             <td>
-                @*<a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-            <a asp-page="./Details" asp-route-id="@item.Id">Details</a>|*@
                 <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>

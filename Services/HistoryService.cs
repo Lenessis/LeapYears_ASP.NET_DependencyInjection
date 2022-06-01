@@ -1,5 +1,6 @@
 ﻿using LeapYears.DTO;
 using LeapYears.Interfaces;
+using LeapYears.Models;
 using System.Collections.Generic;
 
 namespace LeapYears.Services
@@ -13,6 +14,13 @@ namespace LeapYears.Services
         {
             _historyRepository = historyRepository;
            // _personService = personService;
+        }
+
+        public void AddNewHistory(string result, int userId)
+        {
+            HistoryUser history = new HistoryUser(result, userId);
+
+            _historyRepository.AddNewHistoryToDB(history);
         }
 
         public ListHistoryDTO GetHistoryToList()
@@ -29,14 +37,12 @@ namespace LeapYears.Services
 
             foreach (var item in history)
             {
-                //PersonDTO personName = _personService.GetPerson(item.YearUserId);
                 var newHistoryItem = new HistoryDTO()
                 {
                     Id = item.Id,
                     Date = item.date,
                     Result = item.result,
-                    //Fullname = item.YearUser.name + " " + item.YearUser.lastname
-                    Fullname = item.YearUserId.ToString()
+                    Fullname = item.YearUser.name + " " + item.YearUser.lastname
                     
                 };
                 result.History.Add(newHistoryItem);
@@ -46,6 +52,30 @@ namespace LeapYears.Services
 
             return result;
         }
-      
+
+        public ListHistoryDTO GetLimitedHistoryToList()
+        {
+            var history = _historyRepository.GetLimitedHistory();
+
+            ListHistoryDTO result = new ListHistoryDTO();
+            result.History = new List<HistoryDTO>();
+
+            foreach (var item in history)
+            {
+                var newHistoryItem = new HistoryDTO()
+                {
+                    Id = item.Id,
+                    Date = item.date,
+                    Result = item.result,
+                    Fullname = item.YearUser.name + " " + item.YearUser.lastname
+
+                };
+                result.History.Add(newHistoryItem);
+            }
+
+            result.Count = result.History.Count;
+
+            return result;
+        }
     }
 }

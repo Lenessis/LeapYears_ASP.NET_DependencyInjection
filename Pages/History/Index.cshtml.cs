@@ -8,24 +8,28 @@ using Microsoft.EntityFrameworkCore;
 using LeapYears.Data;
 using LeapYears.Models;
 using LeapYears.Pages;
+using LeapYears.DTO;
+using LeapYears.Interfaces;
 
 namespace LeapYears.Pages.History
 {
     public class IndexModel : PageModel
     {
-        private readonly LeapYears.Data.ContextDB _context;
 
-        public IndexModel(LeapYears.Data.ContextDB context)
+        public ListHistoryDTO records { get; set; }
+        private readonly IHistoryService _historyService;
+
+        public IndexModel(LeapYears.Data.ContextDB context, IHistoryService historyService)
         {
-            _context = context;
+            _historyService = historyService;
         }
 
         public IList<Models.HistoryUser> History { get;set; }
 
         public async Task OnGetAsync()
         {
-            History = await _context.History
-                .Include(h => h.YearUser).OrderByDescending(h => h.date).Take(20).ToListAsync();
+
+            records = _historyService.GetLimitedHistoryToList();
         }
     }
 }

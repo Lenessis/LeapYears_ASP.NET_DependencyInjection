@@ -1,4 +1,5 @@
 using LeapYears.Data;
+using LeapYears.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -14,26 +15,22 @@ namespace LeapYears.Pages
 
         [BindProperty]
         public YearUser user { get; set; }
-        public List<YearUser> list = new List<YearUser>();
-        public List<YearUser> listDB = new List<YearUser>();
+
+        private readonly IPersonService _personService;
 
         private readonly ILogger<AddingPersonModel> _logger;
-        private readonly ContextDB _context; // -- context bazy danych 
 
-        public AddingPersonModel(ILogger<AddingPersonModel> logger, ContextDB context)
+        public AddingPersonModel(ILogger<AddingPersonModel> logger, IPersonService personService)
         {
             _logger = logger;
-            _context = context;
+            _personService = personService;
         }
 
         public void OnGet()
-        {
-            listDB = _context.User.OrderBy(p => p.name).ToList();
-        }
+        {        }
 
         public IActionResult OnPost()
         {
-            listDB = _context.User.OrderBy(p => p.name).ToList();
 
             if (ModelState.IsValid)
             {
@@ -43,14 +40,8 @@ namespace LeapYears.Pages
                 gender = user.Gender();
                 hide = false;
 
-
-
-                _context.User.Add(user);
-                _context.SaveChanges();
-
-                //return RedirectToPage("./Index");
+                _personService.AddNewPerson(user);
             }
-            //return RedirectToPage("./Index"); // brak komunikatów
 
             return Page();
         }

@@ -295,7 +295,7 @@ D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\LeapYears.Views.pdb
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\LeapYears.csproj.CopyComplete
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\LeapYears.dll
-D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\refint\LeapYears.dll
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\LeapYears.pdb
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\LeapYears.genruntimeconfig.cache
 D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\obj\Debug\net5.0\ref\LeapYears.dll
+D:\Dokumenty\Studia\06.SEMESTR VI\.NET\zad6 - wstrzykiwanie serwisów\LeapYears\bin\Debug\net5.0\ref\LeapYears.dll

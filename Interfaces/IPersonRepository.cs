@@ -6,5 +6,7 @@ namespace LeapYears.Interfaces
     {
         IQueryable<YearUser> GetAllPeople();
         IQueryable<YearUser> GetPersonById(int id);
+        IQueryable<YearUser> GetPersonByName(string phrase);
+        void AddNewPersonDB(YearUser user);
     }
 }

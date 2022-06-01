@@ -6,7 +6,8 @@ namespace LeapYears.Interfaces
     public interface IPersonService
     {
         ListPersonDTO GetPeopleToList();
-        PersonDTO GetPerson(int id);
-        //void AddPerson(); // - z parametrem
+        PersonDTO GetOnePerson(int id);
+        ListPersonDTO GetPersonsByNameToList(string phrase);
+        void AddNewPerson(YearUser user);
     }
 }

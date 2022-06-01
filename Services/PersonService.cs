@@ -13,6 +13,11 @@ namespace LeapYears.Services
             _personRepository = personRepository;
         }
 
+        public void AddNewPerson(YearUser user)
+        {
+            _personRepository.AddNewPersonDB(user);
+        }
+
         public ListPersonDTO GetPeopleToList()
         {
             var people = _personRepository.GetAllPeople();
@@ -35,7 +40,7 @@ namespace LeapYears.Services
             return result;
         }
 
-        public PersonDTO GetPerson(int id)
+        public PersonDTO GetOnePerson(int id)
         {
             var person = _personRepository.GetPersonById(id);
 
@@ -53,6 +58,33 @@ namespace LeapYears.Services
                 }
                 return result;
             }               
+        }
+
+        public ListPersonDTO GetPersonsByNameToList(string phrase)
+        {
+            var person = _personRepository.GetPersonByName(phrase);
+
+            if (person == null)
+                return null;
+
+            else
+            {
+                ListPersonDTO result = new ListPersonDTO();
+                result.People = new List<PersonDTO>();
+
+                foreach (var item in person)
+                {
+                    var personDTO = new PersonDTO()
+                    {
+                        Id = item.Id,
+                        Fullname = item.name + " " + item.lastname,
+                        Year = item.year
+                    };
+                    result.People.Add(personDTO);
+                    
+                }
+                return result;
+            }
         }
     }
 }
