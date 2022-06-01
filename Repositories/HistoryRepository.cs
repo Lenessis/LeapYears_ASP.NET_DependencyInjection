@@ -46,9 +46,9 @@ namespace LeapYears.Repositories
                                year = u.year
                            }
                        };
-            data.Take(20);
+            //data.Take(20);
 
-            return data;
+            return data.Take(20);
         }
 
         public IQueryable<HistoryUser> GetTodayHistory()
